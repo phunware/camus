@@ -1,3 +1,12 @@
+# FOR PHUNWARE USE
+The branch you need to use is the hadoop2 branch.
+In the root, run 'mvn clean package'
+To run the localpoint-camus target, 'cd' to localpoint-camus.
+If you are running this on OSX, run 'zip -d target/localpoint-camus-0.1.0-SNAPSHOT-shaded.jar META-INF/LICENSE', this will remove that file. This is a problem, because OS X is case insensitive.
+Then, run 'hadoop jar target/localpoint-camus-0.1.0-SNAPSHOT-shaded.jar com.linkedin.camus.etl.kafka.CamusJob -P src/main/resources/camus.properties'.
+
+Alter the camus.properties file to suit your needs.
+
 # Intro
 Camus is LinkedIn's [Kafka](http://kafka.apache.org "Kafka")->HDFS pipeline. It is a mapreduce job that does distributed data loads out of Kafka. It includes the following features:
 
