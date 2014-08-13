@@ -146,6 +146,7 @@
 		<module>camus-schema-registry</module>
 		<module>camus-schema-registry-avro</module>
 		<module>camus-example</module>
+        <module>localpoint-camus</module>
 		<module>camus-sweeper</module>
 	</modules>
 

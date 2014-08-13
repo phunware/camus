@@ -1,0 +1,25 @@
+{
+	"namespace": "com.phunware.messages.avro",
+				 "type": "record",
+				 "name": "ValidatedLocalpointEventsAvroTopic",
+				 "fields": [
+						{"name": "tenant_id", "type": ["null","long"]},
+						{"name": "device_id",  "type": ["null", "string"]},
+						{"name": "device_id_type", "type": ["null", "string"]},
+						{"name": "device_encoding_type", "type": ["null", "string"]},
+						{"name": "store_id", "type": ["null","long"]},
+						{"name": "geofence_id", "type": ["null","long"]},
+						{"name": "device_date_time", "type": ["null","string"]},
+						{"name": "device_location_accuracy", "type": ["null","double"]},
+						{"name": "device_location_latitude", "type": ["null","double"]},
+						{"name": "device_location_longitude", "type": ["null","double"]},
+						{"name": "request", "type": ["null", "string"]},
+						{"name": "response", "type": ["null","string"]},
+						{"name": "requestDate", "type": ["null","string"]},
+						{"name": "message_id", "type": ["null","long"]},
+						{"name": "push_notification_event_id", "type": ["null","long"]},
+						{"name": "callback_string", "type": ["null","string"]},
+						{"name": "campaign_id", "type": ["null","long"]},
+						{"name": "event_type", "type": ["null","string"]}
+				 ]
+}
