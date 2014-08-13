@@ -1,5 +1,6 @@
 package com.linkedin.camus.coders;
 
+import java.io.IOException;
 import java.util.Properties;
 
 /**
@@ -20,6 +21,6 @@ public abstract class MessageDecoder<M,R> {
         this.topicName = topicName;
 	}
 
-	public abstract CamusWrapper<R> decode(M message) ;
+	public abstract CamusWrapper<R> decode(M message) throws IOException;
 
 }

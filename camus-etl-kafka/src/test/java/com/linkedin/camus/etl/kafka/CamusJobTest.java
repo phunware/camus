@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Random;
 
+import com.linkedin.camus.etl.kafka.coders.KafkaAvroMessageDecoder;
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;

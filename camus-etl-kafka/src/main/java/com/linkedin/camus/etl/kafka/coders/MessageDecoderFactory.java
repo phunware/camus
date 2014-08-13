@@ -15,14 +15,14 @@ public class MessageDecoderFactory {
         MessageDecoder<?,?> decoder;
         try {
             decoder = (MessageDecoder<?,?>) EtlInputFormat.getMessageDecoderClass(context).newInstance();
-            
+
             Properties props = new Properties();
             for (Entry<String, String> entry : context.getConfiguration()){
                 props.put(entry.getKey(), entry.getValue());
             }
             
             decoder.init(props, topicName);
-            
+            System.out.println("DECODER: " + decoder.toString());
             return decoder;
         } catch (Exception e) {
             throw new MessageDecoderException(e);

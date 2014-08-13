@@ -1,5 +1,7 @@
 package com.linkedin.camus.example.schemaregistry;
 
+import com.phunware.messages.avro.LocalpointEventMsgAvro;
+import com.phunware.messages.avro.ValidatedLocalpointEventsAvroTopic;
 import org.apache.avro.Schema;
 import org.apache.hadoop.conf.Configuration;
 
@@ -13,10 +15,19 @@ import com.linkedin.camus.schemaregistry.MemorySchemaRegistry;
  * camus.properties
  */
 public class DummySchemaRegistry extends MemorySchemaRegistry<Schema> {
+    public DummySchemaRegistry() {
+        super();
+        super.register("validated_localpoint_events_avro_topic", LocalpointEventMsgAvro.SCHEMA$);
+    }
+    /*
 	public DummySchemaRegistry(Configuration conf) {
 		super();
-		super.register("DUMMY_LOG", DummyLog.newBuilder().build().getSchema());
-		super.register("DUMMY_LOG_2", DummyLog2.newBuilder().build()
-				.getSchema());
+		//super.register("DUMMY_LOG", DummyLog.SCHEMA$); //newBuilder().build().getSchema());
+		//super.register("DUMMY_LOG_2", DummyLog2.newBuilder().build().getSchema());
+        //super.register("VALIDATED_LOCALPOINT_EVENTS_AVRO_TOPIC", ValidatedLocalpointEventsAvroTopic.SCHEMA$); //newBuilder().build().getSchema());
+        //super.register("VALIDATED_LOCALPOINT_EVENTS_AVRO_TOPIC", ValidatedLocalpointEventsAvroTopic.SCHEMA$);
+        super.register("validated_localpoint_events_avro_topic", ValidatedLocalpointEventsAvroTopic.SCHEMA$);
+
 	}
+	*/
 }

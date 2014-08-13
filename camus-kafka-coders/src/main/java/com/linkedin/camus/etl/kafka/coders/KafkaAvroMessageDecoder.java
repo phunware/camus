@@ -106,7 +106,7 @@ public class KafkaAvroMessageDecoder extends MessageDecoder<byte[], Record> {
 		}
 	}
 
-	public CamusWrapper<Record> decode(byte[] payload) {
+	public CamusWrapper<Record> decode(byte[] payload) throws IOException {
 		try {
 			MessageDecoderHelper helper = new MessageDecoderHelper(registry,
 					topicName, payload).invoke();
